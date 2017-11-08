@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  background: radial-gradient(black 15%, transparent 16%) 0 0,
+              radial-gradient(black 15%, transparent 16%) 8px 8px,
+              radial-gradient(rgba(255, 255, 255, .1) 15%, transparent 20%) 0 1px,
+              radial-gradient(rgba(255, 255, 255, .1) 15%, transparent 20%) 8px 9px;
+  background-color: #282828;
+  background-size: 16px 16px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 70px;
+  font-family: 'VT323', monospace;
+  text-shadow: 0 0 8px black;
+  letter-spacing: 5px;
+  color: #D8DAD3;
+}
+
+.board-grid {
+  width: 805px;
+  height: 600px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 115px 115px 115px 115px 115px 115px 115px;
+  background: #454545;
+  border-radius: 10px;
+  position: relative;
+  opacity: 0.8
+}
+
+.slot {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slot div {
+  width: 80px;
+  height: 80px;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  background: #D8DAD3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #D8DAD3;
+}
+
+.row-invisible {
+  position: relative;
+  width: 805px;
+  height: 80px;
+  margin: auto;
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+.outer {
+  width: 115px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player {
+  width: 80px;
+  height: 80px;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  background: #F0544F;
+}
+
+.red {
+  background: #F0544F !important;
+  color: #F0544F !important
+}
+
+.green {
+  background: #81E979 !important;
+  color: #81E979 !important;
+}
+
+.winner {
+  position: absolute;
+  z-index: 9999;
+  width: 700px;
+  height: 500px;
+  left: 60px;
+  top: 50px;
+  background: #2F2F2F;
+  opacity: 0.9;
+  border-radius: 10px;
+  display: none;
+}
+
+.winner p {
+  font-size: 100px;
+  position: absolute;
+  top: 90px;
+  left: 120px;
+  text-transform: uppercase;
+  font-family: 'VT323', monospace;
+  /* linear = direction infinite = iteration-count duration: 2sec*/
+  animation: blink 2s linear infinite;
+}
+
+
+/*The animation is created by gradually changing from one set of CSS styles to another.*/
+@keyframes blink {
+  50% {opacity: 0; transform: scale(0.8);}
+  100% {opacity: 1; transform: scale(1);}
+}
