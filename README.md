@@ -19,4 +19,4 @@ In this game players take turns dropping their pieces into one of seven columns 
 
 * User gameplay
 
-![User Gameplay](Connect_Four_Example.gif)
+![User Gameplay](connect_four.gif)
