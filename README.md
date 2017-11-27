@@ -1,6 +1,6 @@
 # Connect-Four-Game
 
-## Summary:
+## Summary
 
 Simple game using jQuery.
 
