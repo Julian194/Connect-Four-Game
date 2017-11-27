@@ -17,6 +17,5 @@ In this game players take turns dropping their pieces into one of seven columns 
 5. After a player wins, the game resets and players can begin again.
 
 
-* User gameplay
 
 ![User Gameplay](connect_four.gif)
