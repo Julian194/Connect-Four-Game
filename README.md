@@ -1,6 +1,6 @@
 # Connect-Four-Game
 
-[connect04.netlify.com](connect04.netlify.com)
+Live demo at [https://connect04.netlify.com](https://connect04.netlify.com/)
 
 ## Description
 
